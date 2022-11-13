@@ -8,6 +8,7 @@ $user_data = check_login($con);
 
 ?>
 
+
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -37,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="starter.php" class="nav-link">Home</a>
+        <a href="sapi2.php" class="nav-link">Home</a>
       </li>
 
     </ul>
@@ -81,7 +82,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="starter.php" class="brand-link">
+    <a href="sapi2.php" class="brand-link">
       <img src="moojaw color 1.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">My-MoOjaw</span>
     </a>
@@ -117,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
               <p>
                 Nomor Seri Sapi
@@ -126,7 +127,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="starter.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sapi 1</p>
                 </a>
@@ -140,7 +141,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="kontakmantri.php" class="nav-link">
+            <a href="kontakmantri.php" class="nav-link active">
               <!-- <i class="nav-icon fas fa-th"></i> -->
               <p>
                 Kontak Mantri 
@@ -169,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Sapi 1</h1>
+            <h1 class="m-0">Kontak Mantri</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -186,88 +187,213 @@ scratch. This page gets rid of all links and provides the needed markup only.
    <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-10">
-          <div class="card">
+        <div class="col-lg-4">
+          <div class="card card-info">
             <div class="card-header border-0">
               <div class="d-flex justify-content-between">
-                <h3 class="card-title">Detak Jantung</h3>
-                <a href="javascript:void(0);">Lihat hasil keseluruhan</a>
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
               </div>
             </div>
-            <div class="card-body">
-              <div class="d-flex">
-                <p class="d-flex flex-column">
-                  <span id="Lbpm" class="text-bold text-lg"></span>
-                  <span>Beats per minute (bpm)</span>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
               </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
               <!-- /.d-flex -->
-
-              <div class="position-relative mb-4">
-                <canvas id="bpm-chart" height="400"></canvas>
-              </div>
-
-              
             </div>
           </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-info">
+            <div class="card-header border-0">
+              <div class="d-flex justify-content-between">
+                <!-- nama mantri -->
+                <h3 class="card-title">Mantri</h3>
+                <a href="https://wa.me/085229453082" >Hubungi</a>
+              </div>
+            </div>
+            <div class="card-body box-profile">
+              <div class="text-center">
+                <img class="profile-user-img img-circle" src="bambang.jpg" alt="'User Prof Pic">
+              </div>
+              <h3 class="profile-username text-center">Bambang</h3>
+              <p class="text-muted text-center">mantri</p>
+              <ul class="list-group list-group-unbordered mb-3">
+                <li class="list-group-item">
+                  <b>Pasien terobati</b>
+                  <a class="float-right">236</a>
+                </li>
+              </ul>
+              <a href="https://wa.me/085229453082" class="btn btn-info btn-block">
+                <b>Hubungi</b>
+              </a>
+              <!-- /.d-flex -->
+            </div>
+          </div>
+          
         </div>
         <!-- /.col-md-6 -->
       </div>
-      <div class="row">
-        <div class="col-lg-10">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="d-flex justify-content-between">
-                <h3 class="card-title">Suhu</h3>
-                <a href="">Lihat hasil keseluruhan</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="d-flex">
-                <p class="d-flex flex-column">
-                  <span id="Ltemp" class="text-bold text-lg"></span>
-                  <span>Celcius</span>
-              </div>
-              <!-- /.d-flex -->
-
-              <div class="position-relative mb-4">
-                <canvas id="temps-chart" height="200"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.col-md-6 -->
-      </div>
-      <div class="row">
-        <div class="col-lg-10">
-          <div class="card">
-            <div class="card-header border-0">
-              <div class="d-flex justify-content-between">
-                <h3 class="card-title">Sensor gerak hewan</h3>
-                <a href="">Lihat hasil keseluruhan</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="d-flex">
-                <p class="d-flex flex-column">
-                  <button onclick="timer.start()">Try it</button>
-              </div>
-              <div class="d-flex">
-                <p class="d-flex flex-column">
-                  <span id="waktu terakhir bergerak" class="text-bold text-lg"></span>
-                  <span>Terakhir gerak</span>
-
-              </div>
-              
-              <!-- /.d-flex -->
-
-              <div class="position-relative mb-4">
-                <canvas id="temps-chart" height="200"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.col-md-6 -->
-      </div>
+      
+      
       <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
@@ -290,13 +416,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-</footer>
+
 </div>
 <!-- ./wrapper -->
 

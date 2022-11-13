@@ -18,7 +18,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My-MoOjaw</title>
-
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
@@ -126,13 +125,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="starter.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sapi 1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="sapi2.php" class="nav-link">
+                <a href="sapi2.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Sapi 2</p>
                 </a>
@@ -169,12 +168,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Sapi 1</h1>
+            <h1 class="m-0">Data Sapi 2</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Nomor Seri Sapi</a></li>
-              <li class="breadcrumb-item active">Sapi 1</li>
+              <li class="breadcrumb-item active">Sapi 2</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -203,7 +202,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.d-flex -->
 
               <div class="position-relative mb-4">
-                <canvas id="bpm-chart" height="400"></canvas>
+                <canvas id="bpm-chart2" height="400"></canvas>
               </div>
 
               
@@ -230,7 +229,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.d-flex -->
 
               <div class="position-relative mb-4">
-                <canvas id="temps-chart" height="200"></canvas>
+                <canvas id="temps-chart2" height="200"></canvas>
               </div>
             </div>
           </div>
@@ -261,7 +260,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.d-flex -->
 
               <div class="position-relative mb-4">
-                <canvas id="temps-chart" height="200"></canvas>
+                <canvas id="#" height="200"></canvas>
               </div>
             </div>
           </div>

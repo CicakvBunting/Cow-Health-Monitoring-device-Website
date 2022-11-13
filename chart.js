@@ -1,6 +1,6 @@
 /* global Chart:false */
 
-$(function () {
+
     'use strict'
       var ticksStyle = {
       fontColor: '#495057',
@@ -374,7 +374,6 @@ plugins: [{
       }
     }
     myChart.update();
-  })
-  
+ 
   // lgtm [js/unused-local-variable]
   
