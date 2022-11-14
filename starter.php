@@ -5,6 +5,19 @@ include("sample databases\login\connection.php");
 include("sample databases\login\\functions.php");
 
 $user_data = check_login($con);
+$tabel = $user_data['user_id'];
+$datachart = mysqli_query($con,"select * from `$tabel`;");
+while($row = mysqli_fetch_array($datachart)){
+	$databpm[] = $row['bpm'];
+	$datatemp[] = $row['temp'];
+  $waktu[]=$row['time'];
+}
+
+
+
+
+
+
 
 ?>
 
@@ -314,6 +327,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="chart.js"></script>
-<script src="gerak.js"></script>
+
 </body>
 </html>
