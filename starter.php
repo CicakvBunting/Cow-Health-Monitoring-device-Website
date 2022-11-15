@@ -6,19 +6,12 @@ include("sample databases\login\\functions.php");
 
 $user_data = check_login($con);
 $tabel = $user_data['user_id'];
-$datachart = mysqli_query($con,"select * from `$tabel`;");
+$datachart = mysqli_query($con,"select * from `$tabel` limit 100;");
 while($row = mysqli_fetch_array($datachart)){
-	$databpm[] = $row['bpm'];
-	$datatemp[] = $row['temp'];
-  $waktu[]=$row['time'];
+	$databpmdb[] = $row['bpm'];
+	$datatempdb[] = $row['temp'];
+  $waktudb[]=$row['time'];
 }
-
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -243,7 +236,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!-- /.d-flex -->
 
               <div class="position-relative mb-4">
-                <canvas id="temps-chart" height="200"></canvas>
+                <canvas id="temp-chart" height="200"></canvas>
               </div>
             </div>
           </div>
@@ -326,7 +319,157 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="chart.js"></script>
+<script src="chartbaru.js"></script>
+<script>
+var databpmtes = <?php echo json_encode($databpmdb, JSON_HEX_TAG); ?>;
+waktutes= <?php echo json_encode($waktudb, JSON_HEX_TAG); ?>;
+datatemptes = <?php echo json_encode($datatempdb, JSON_HEX_TAG); ?>;
 
+
+new Chart(document.getElementById("bpm-chart"), {
+  type: 'line',
+  data: {
+    labels: waktutes,
+    datasets: [{ 
+        data: databpmtes,
+        label: "Beats per Second",
+        borderColor: 'green',
+        pointBorderColor: 'green',
+        pointBackgroundColor: 'black',
+        pointRadius:3,
+        fill: false,
+        pointHoverBackgroundColor: 'green',
+        pointHoverBorderColor    : 'green'
+      }
+    ],
+    
+  },
+  plugins: [{
+    beforeRender: (x, options) => {
+      const c = x.chart;
+      const dataset = x.data.datasets[0];
+      const yScale = x.scales['y-axis-0'];
+      const yPos = yScale.getPixelForValue(20);
+    
+      const gradientFill = c.ctx.createLinearGradient(0, 0, 0, c.height);
+      gradientFill.addColorStop(0, 'rgb(86,188,77)');
+      gradientFill.addColorStop(yPos / c.height, 'rgb(86,188,77)');
+      gradientFill.addColorStop(yPos / c.height, 'rgb(229,66,66)');
+      gradientFill.addColorStop(1, 'rgb(229,66,66)');
+    
+      const model = x.data.datasets[0]._meta[Object.keys(dataset._meta)[0]].dataset._model;
+      model.borderColor = gradientFill;
+    },
+    }],
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      mode: 'index',
+      intersect: true
+    },
+    hover: {
+      mode: 'index',
+      intersect: true
+    },
+    legend: {
+      display: false
+    },
+    scales : {
+      yAxes : [{
+        gridLines: {
+          display: false
+        },
+          ticks : {
+              beginAtZero : true,
+              suggestedMax: 200
+          }   
+      }],
+      xAxes: [{
+        display: true,
+        gridLines: {
+          display: false
+        },
+        ticks: {
+          fontColor: '#495057',
+          fontStyle: 'bold'
+        }
+      }]
+  }
+  }
+});
+//end bpm-chart
+
+//temp chart
+new Chart(document.getElementById("temp-chart"), {
+  type: 'line',
+  data: {
+    labels: waktutes,
+    datasets: [{ 
+        data: datatemptes,
+        label: "Beats per Second",
+        borderColor: 'green',
+        pointBorderColor: 'green',
+        pointBackgroundColor: 'black',
+        pointRadius:3,
+        fill: false,
+        pointHoverBackgroundColor: 'green',
+        pointHoverBorderColor    : 'green'
+      }
+    ],
+    
+  },
+  plugins: [{
+    beforeRender: (x, options) => {
+      const c = x.chart;
+      const dataset = x.data.datasets[0];
+      const yScale = x.scales['y-axis-0'];
+      const yPos = yScale.getPixelForValue(28);
+    
+      const gradientFill = c.ctx.createLinearGradient(0, 0, 0, c.height);
+      gradientFill.addColorStop(0, 'rgb(86,188,77)');
+      gradientFill.addColorStop(yPos / c.height, 'rgb(86,188,77)');
+      gradientFill.addColorStop(yPos / c.height, 'rgb(229,66,66)');
+      gradientFill.addColorStop(1, 'rgb(229,66,66)');
+    
+      const model = x.data.datasets[0]._meta[Object.keys(dataset._meta)[0]].dataset._model;
+      model.borderColor = gradientFill;
+    },
+    }],
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      mode: 'index',
+      intersect: true
+    },
+    hover: {
+      mode: 'index',
+      intersect: true
+    },
+    legend: {
+      display: false
+    },
+    scales : {
+      yAxes : [{
+        gridLines: {
+          display: false
+        },
+          ticks : {
+              beginAtZero : true,
+          }   
+      }],
+      xAxes: [{
+        display: true,
+        gridLines: {
+          display: false
+        },
+        ticks: {
+          fontColor: '#495057',
+          fontStyle: 'bold'
+        }
+      }]
+  }
+  }
+});
+</script>
 </body>
 </html>

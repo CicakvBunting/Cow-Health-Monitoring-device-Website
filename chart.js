@@ -20,8 +20,9 @@ const genericOptions = {
   var mode = 'index'
   var intersect = true
   // data bpm
-  const databpm = [40,56,70,80,90,43,23,67,80,90,120,20,30,80,50,60,90,32,67,89,67,80,90,65];
-  var $bpmChart = $('#bpm-chart')
+  databpm = [10,56,70,80,90,43,23,67,80,90,120,20,30,80,50,60,90,32,67,89,67,80,90,65];
+  var $bpmChart = $('#bpm-chart');
+  var ctx = document.getElementById('#bpm-chart').getContext('2d');
   let Lastbpm = databpm.slice(-1);
   document.getElementById("Lbpm").innerHTML = Lastbpm;
   // eslint-disable-next-line no-unused-vars
@@ -195,7 +196,7 @@ beforeRender: (x, options) => {
   })
 
   //temp 2
-  const datatemp2 = [60,28,29,28,29,27,30,30,40,20,31,17,18,19,12,23,25,26,26,27,24,25,26,50];
+  const datatemp2 = [30,28,29,28,29,27,30,30,40,20,31,17,18,19,12,23,25,26,26,27,24,25,26,50];
 
   let Lasttemp2 = datatemp2.slice(-1);
   document.getElementById("Ltemp").innerHTML = Lasttemp2;
@@ -365,15 +366,6 @@ beforeRender: (x, options) => {
           }
         }
       })
-
-  var colorChangeValue = 70;
-  var dataset = visitorsChart.data.datasets[0];
-  for (var i = 0; i < dataset.data.length; i++) {
-    if (dataset.data[i] > colorChangeValue) {
-      dataset.backgroundColor[i] = chartColors.red;
-    }
-  }
-  myChart.update();
 })
 
 // lgtm [js/unused-local-variable]
